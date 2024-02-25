@@ -1,2 +1,13 @@
 const inputBox = document.getElementById('input-box');
 const listContainer = document.getElementById('list-container');
+function addTask(){
+    const task = inputBox.value;
+    if(inputBox.value === ''){
+        alert('Your must write something');
+    }
+    else{
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        listContainer.appendChild(li);
+    }
+}
